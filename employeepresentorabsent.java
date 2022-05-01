@@ -29,8 +29,31 @@ public class employeepresentorabsent {
         return daily_wage;
     }
 
+    public double monthlywage () {
+        double monthly_wage=0.0;
+        int p= dailywage();
+        int i=0;
+        if (p==0){
+            System.out.println("Employee Wage for the day="+ p);
+            System.out.println("Employee is not present on all days");
+            i=0;}
+        else{
+            System.out.println("Employee Wage for the day="+ p);
+            System.out.println("Employee is present on all days");
+            i=1;}
+        switch (i) {
+            case 1:
+                monthly_wage = 20 * WAGE_PER_HOUR * TOTAL_HOUR;
+                break;
+            case 0:
+                monthly_wage = 0;
+                break;
+        }
+        return monthly_wage;
+    }
+
     public static void main(String[] args) {
         employeepresentorabsent emp=new employeepresentorabsent();
-        System.out.println("Employee Wage =" + emp.dailywage());
+        System.out.println("Employee Wage for the month="+ emp.monthlywage());
     }
 }
