@@ -4,6 +4,9 @@
 public class employeepresentorabsent {
     private static int WAGE_PER_HOUR=20;
     private static int TOTAL_HOUR=8;
+    
+    //To check employee is present or absent
+    
     public boolean empPresent(){
         boolean ifempPres=false;
         double random_value= Math.random();
@@ -16,6 +19,8 @@ public class employeepresentorabsent {
         }
         return ifempPres;
     }
+    
+    //To get daily wage
     public int dailywage(){
         int daily_wage=0;
         boolean e=empPresent();
@@ -28,7 +33,7 @@ public class employeepresentorabsent {
         }
         return daily_wage;
     }
-
+    //To get monthly wage
     public double monthlywage () {
         double monthly_wage=0.0;
         int p= dailywage();
