@@ -16,6 +16,8 @@ public class employeepresentorabsent {
         }
         return ifempPres;
     }
+    
+    //To get daily wage
     public int dailywage(){
         int daily_wage=0;
         boolean e=empPresent();
